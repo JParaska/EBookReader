@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/e_book_list_item"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    >
+
+    <TextView
+        android:id="@+id/eBookTitleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:gravity="center_vertical"
+        android:text="EBook Title"
+        android:textStyle="bold"
+
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/eBookAuthorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Author of the book"
+        android:textSize="16sp"
+
+        android:layout_below="@+id/eBookTitleTextView"/>
+
+
+   <View
+       android:id="@+id/separatorView"
+       android:layout_width="match_parent"
+       android:layout_height="1sp"
+       android:background="@android:color/background_dark"
+       android:layout_below="@id/eBookAuthorTextView"
+       />
+
+
+    <TextView
+        android:id="@+id/eBookChTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separatorView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Actual chapter/page: "
+
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/eBookChapterTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separatorView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/eBookChTextView"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Actual chapter"
+
+        android:textSize="14sp" />
+
+
+    <!--
+    http://www.vogella.com/tutorials/AndroidListView/article.html
+    -->
+
+</RelativeLayout>

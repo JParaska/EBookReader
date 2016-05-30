@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b3de81"
+    tools:context="sk.sanctuary.android.ebookreader.EBookDetailActivity">
+
+    <ImageView
+        android:id="@+id/coverDetailImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:background="#ccffffff"
+        >
+
+        <TextView
+            android:id="@+id/mainTitleDetailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main Title"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/subtitelDetailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mainTitleDetailTextView"
+            android:text="Subtitl"
+            android:textSize="21sp"
+            android:textStyle="italic" />
+
+
+        <TextView
+            android:id="@+id/authorDetailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subtitelDetailTextView"
+            android:text="Author"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/otherAuthorsDetailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/authorDetailTextView"
+            android:text="and Other authors"
+            android:textSize="18sp"/>
+
+
+        <View
+            android:id="@+id/separatorDetailView"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@android:color/background_dark"
+            android:layout_below="@id/otherAuthorsDetailTextView"
+            android:layout_margin="3dp"/>
+
+
+        <TextView
+            android:id="@+id/subjectsDetailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separatorDetailView"
+            android:text="subjects"
+            android:textSize="18sp"/>
+
+
+        <TextView
+            android:id="@+id/publishersDetailTetView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subjectsDetailTextView"
+            android:text="publishers"
+            android:textSize="18sp"/>
+
+
+        <ImageButton
+            android:id="@+id/deleteEBookDetailButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="@drawable/round_button"
+            android:onClick="deleteBook"
+            />
+    </RelativeLayout>
+
+</FrameLayout>

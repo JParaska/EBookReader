@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EBookActivity">
+
+    <item
+        android:id="@+id/goToMenu"
+        android:title="Go to..."
+        android:icon="@android:drawable/ic_menu_set_as"
+        android:onClick="goTo"
+        android:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/infoMenu"
+        android:title="Book info"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:onClick="showEBookDetails"
+        android:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/addBookmark"
+        android:title="Put bookmark here"
+        android:icon="@android:drawable/star_big_off"
+        android:onClick="addBookmark"
+        android:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/showBookmarks"
+        android:title="Show Bookmarks"
+        android:icon="@android:drawable/star_big_on"
+        android:onClick="showBookmarks"
+        android:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/deleteBookmarks"
+        android:title="Delete Bookmarks"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:onClick="deleteBookmarks"
+        android:showAsAction="ifRoom|withText"/>
+
+</menu>
