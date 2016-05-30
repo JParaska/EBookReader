@@ -44,7 +44,7 @@ public class PagerEBookActivity extends AppCompatActivity {
     String path;
     private ViewPager pager;
 
-    private Book book;
+    private Book book; //http://www.siegmann.nl/epublib/android
     private List<Resource> contents;
 
     int chapter = -1;
