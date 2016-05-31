@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="sk.sanctuary.android.ebookreader">
+    package="sk.paraska.android.ebookreader">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="true">
-        <activity android:name=".MainActivity">
+        <activity android:name="sk.paraska.android.ebookreader.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,13 +18,13 @@
         </activity>
 
         <provider
-            android:name=".provider.EBooksContentProvider"
-            android:authorities="sk.sanctuary.android.ebookreader.provider.EBooksContentProvider"
+            android:name="sk.paraska.android.ebookreader.provider.EBooksContentProvider"
+            android:authorities="sk.paraska.android.ebookreader.provider.EBooksContentProvider"
             android:enabled="true"
             android:exported="false" />
 
-        <activity android:name=".PagerEBookActivity" />
-        <activity android:name=".EBookDetailActivity"></activity>
+        <activity android:name="sk.paraska.android.ebookreader.PagerEBookActivity" />
+        <activity android:name="sk.paraska.android.ebookreader.EBookDetailActivity"></activity>
     </application>
 
-x`</manifest>
+</manifest>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#b3de81"
-    tools:context="sk.sanctuary.android.ebookreader.EBookDetailActivity">
+    tools:context="sk.paraska.android.ebookreader.EBookDetailActivity">
 
     <ImageView
         android:id="@+id/coverDetailImageView"

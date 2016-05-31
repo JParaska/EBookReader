@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "sk.sanctuary.android.ebookreader"
+        applicationId "sk.paraska.android.ebookreader"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1

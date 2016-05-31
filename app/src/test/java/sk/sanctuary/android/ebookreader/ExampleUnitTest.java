@@ -1,4 +1,4 @@
-package sk.sanctuary.android.ebookreader;
+package sk.paraska.android.ebookreader;
 
 import org.junit.Test;
 
