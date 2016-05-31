@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="orderbooks"
+        android:title="Order EBooks"
+        android:summary="Order EBook By"
+        android:entries="@array/orderArray"
+        android:entryValues="@array/orderValuesArray"
+        android:defaultValue="4"/>
+</PreferenceScreen>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="orderArray">
+        <item>Name (a-z)</item>
+        <item>Name (z-a)</item>
+        <item>Date added (newest first)</item>
+        <item>Date added (newest last</item>
+    </string-array>
+
+    <string-array name="orderValuesArray">
+        <item>name asc</item>
+        <item>name desc</item>
+        <item>id desc</item>
+        <item>id asc</item>
+    </string-array>
+</resources>

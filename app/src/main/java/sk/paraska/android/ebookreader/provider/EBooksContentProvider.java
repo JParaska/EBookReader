@@ -3,10 +3,13 @@ package sk.paraska.android.ebookreader.provider;
 import android.content.ContentProvider;
 import android.content.ContentUris;
 import android.content.ContentValues;
+import android.content.SharedPreferences;
 import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.preference.PreferenceManager;
+import android.util.Log;
 
 import sk.paraska.android.ebookreader.EBooksDataBaseOpenHelper;
 
@@ -187,7 +190,15 @@ public class EBooksContentProvider extends ContentProvider {
 
     private Cursor listItems(String tableName, Uri contentUri, String[] projection, String selection) {
         SQLiteDatabase db = helper.getReadableDatabase();
-        Cursor cursor = db.query(tableName, projection, selection, null, null, null, null);
+
+        String orderBy = null;
+        if (tableName.equals(EBook.TABLE_NAME)){
+            //order by settings
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+            Log.d("EBR", preferences.getString("orderbooks", null));
+        }
+
+        Cursor cursor = db.query(tableName, projection, selection, null, null, null, orderBy);
         cursor.setNotificationUri(getContext().getContentResolver(), contentUri);
         return cursor;
     }

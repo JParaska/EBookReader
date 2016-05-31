@@ -18,8 +18,6 @@ public interface EBooks {
         public static final String AUTHOR = "author";
 
         public static final String CHAPTER = "chapter";
-
-        public static final String POSITION = "position";
     }
 
     public interface Bookmark extends BaseColumns {

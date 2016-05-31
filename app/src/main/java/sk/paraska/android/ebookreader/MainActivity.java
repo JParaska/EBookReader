@@ -7,10 +7,14 @@ import android.content.ContentValues;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -40,10 +44,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private ListView eBookListView;
 
+    public static final boolean DO_NOT_READ_AGAIN = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        PreferenceManager.setDefaultValues(this, R.xml.settings, DO_NOT_READ_AGAIN);
 
         setTitle("EBookReader");
 
@@ -101,6 +109,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         eBookListView.setAdapter(adapter);
         getLoaderManager().initLoader(0, Bundle.EMPTY, this);
         eBookListView.setEmptyView(findViewById(R.id.eBookImageView));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
     }
 
     /**
@@ -223,5 +238,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 eBookListView.setVisibility(View.VISIBLE);
             }
         }
+    }
+
+    public void settings(MenuItem item) {
+        startActivity(new Intent(this, SettingsActivity.class));
     }
 }

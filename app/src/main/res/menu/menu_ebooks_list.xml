@@ -12,4 +12,10 @@
         app:showAsAction="always"
         />
 
+    <item
+        android:id="@+id/setings"
+        android:title="Settings"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:onClick="settings"
+        app:showAsAction="withText"/>
 </menu>
