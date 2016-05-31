@@ -1,4 +1,4 @@
-package sk.paraska.android.ebookreader;
+package sk.sanctuary.android.ebookreader;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

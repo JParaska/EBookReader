@@ -1,4 +1,4 @@
-package sk.paraska.android.ebookreader;
+package sk.sanctuary.android.ebookreader;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -20,7 +20,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,7 +37,7 @@ import java.util.List;
 import nl.siegmann.epublib.domain.Book;
 import nl.siegmann.epublib.domain.Resource;
 import nl.siegmann.epublib.epub.EpubReader;
-import sk.paraska.android.ebookreader.provider.EBooksContentProvider;
+import sk.sanctuary.android.ebookreader.provider.EBooksContentProvider;
 
 public class PagerEBookActivity extends AppCompatActivity {
 
@@ -46,6 +45,7 @@ public class PagerEBookActivity extends AppCompatActivity {
 
     String path;
     private ViewPager pager;
+    Intent initial = null;
 
     private Book book; //http://www.siegmann.nl/epublib/android
     private List<Resource> contents;
@@ -63,14 +63,14 @@ public class PagerEBookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ebook_pager);
 
-        Intent intent = getIntent();
-        path = intent.getStringExtra("path");
+        initial = getIntent();
+        path = initial.getStringExtra("path");
         if (savedInstanceState != null) {
             chapter = savedInstanceState.getInt(SAVED_CHAPTER);
         } else {
-            chapter = intent.getIntExtra("chapter", 0);
+            chapter = initial.getIntExtra("chapter", 0);
         }
-        id = intent.getLongExtra("id", 0);
+        id = initial.getLongExtra("id", 0);
 
         try {
             File bookTMP = new File(path);
@@ -108,7 +108,7 @@ public class PagerEBookActivity extends AppCompatActivity {
         intent.putExtra("chapter", chapter);
         intent.putExtra("id", id);
 
-        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), (int)id, intent, 0);
 
         Notification notification = new NotificationCompat.Builder(this)
                 .setContentTitle(book.getTitle())

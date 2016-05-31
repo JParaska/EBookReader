@@ -1,4 +1,4 @@
-package sk.paraska.android.ebookreader;
+package sk.sanctuary.android.ebookreader;
 
 import android.app.AlertDialog;
 import android.content.AsyncQueryHandler;
@@ -21,7 +21,7 @@ import nl.siegmann.epublib.domain.Author;
 import nl.siegmann.epublib.domain.Book;
 import nl.siegmann.epublib.domain.Metadata;
 import nl.siegmann.epublib.epub.EpubReader;
-import sk.paraska.android.ebookreader.provider.EBooksContentProvider;
+import sk.sanctuary.android.ebookreader.provider.EBooksContentProvider;
 
 public class EBookDetailActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package sk.paraska.android.ebookreader.provider;
+package sk.sanctuary.android.ebookreader.provider;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;
@@ -11,17 +11,17 @@ import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import sk.paraska.android.ebookreader.EBooksDataBaseOpenHelper;
+import sk.sanctuary.android.ebookreader.EBooksDataBaseOpenHelper;
 
 import static android.content.ContentResolver.SCHEME_CONTENT;
-import static sk.paraska.android.ebookreader.EBooks.EBook;
-import static sk.paraska.android.ebookreader.EBooks.Bookmark;
+import static sk.sanctuary.android.ebookreader.EBooks.EBook;
+import static sk.sanctuary.android.ebookreader.EBooks.Bookmark;
 
 public class EBooksContentProvider extends ContentProvider {
 
     private EBooksDataBaseOpenHelper helper;
 
-    public static final String AUTHORITY = "sk.paraska.android.ebookreader.provider.EBooksContentProvider";
+    public static final String AUTHORITY = "sk.sanctuary.android.ebookreader.provider.EBooksContentProvider";
 
     public static final Uri CONTENT_URI_EBOOK = new Uri.Builder().scheme(SCHEME_CONTENT).authority(AUTHORITY).appendPath(EBook.TABLE_NAME).build();
     public static final Uri CONTENT_URI_BOOKMARK = new Uri.Builder().scheme(SCHEME_CONTENT).authority(AUTHORITY).appendPath(Bookmark.TABLE_NAME).build();

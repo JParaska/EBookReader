@@ -1,4 +1,4 @@
-package sk.paraska.android.ebookreader;
+package sk.sanctuary.android.ebookreader;
 
 import android.graphics.BitmapFactory;
 import android.os.Bundle;

@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:background="#b3de81"
-    tools:context="sk.paraska.android.ebookreader.MainActivity">
+    tools:context="sk.sanctuary.android.ebookreader.MainActivity">
 
     <ListView
         android:id="@+id/eBookListView"

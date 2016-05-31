@@ -1,4 +1,4 @@
-package sk.paraska.android.ebookreader;
+package sk.sanctuary.android.ebookreader;
 
 import android.app.LoaderManager;
 import android.content.AsyncQueryHandler;
@@ -11,10 +11,8 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,8 +29,8 @@ import java.util.List;
 import nl.siegmann.epublib.domain.Author;
 import nl.siegmann.epublib.domain.Book;
 import nl.siegmann.epublib.epub.EpubReader;
-import sk.paraska.android.ebookreader.FileChooser.FileChooser;
-import sk.paraska.android.ebookreader.provider.EBooksContentProvider;
+import sk.sanctuary.android.ebookreader.FileChooser.FileChooser;
+import sk.sanctuary.android.ebookreader.provider.EBooksContentProvider;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 

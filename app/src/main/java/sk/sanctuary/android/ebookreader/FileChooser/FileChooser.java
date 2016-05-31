@@ -1,4 +1,4 @@
-package sk.paraska.android.ebookreader.FileChooser;
+package sk.sanctuary.android.ebookreader.FileChooser;
 
 import android.app.Activity;
 import android.app.Dialog;

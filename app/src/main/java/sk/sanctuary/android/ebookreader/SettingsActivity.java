@@ -1,4 +1,4 @@
-package sk.paraska.android.ebookreader;
+package sk.sanctuary.android.ebookreader;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
